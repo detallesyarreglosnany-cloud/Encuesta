@@ -46,7 +46,9 @@ if v.ndim>1: v=v.mean(1)
 vo=z(); add(vo,v,0.0); vo=hp(vo,70); vo=vo/np.max(np.abs(vo))
 env=signal.lfilter(np.ones(int(.1*SR))/int(.1*SR),1,np.abs(vo)); env=np.clip(env/0.05,0,1); env=signal.lfilter(np.ones(int(.3*SR))/int(.3*SR),1,env)
 duck=1-0.35*env
-mix=mus*0.42*duck+sfx*0.5+vo*0.95
+import os
+MG=0.0 if os.environ.get("NOMUSIC") else 0.42
+mix=mus*MG*duck+sfx*0.5+vo*0.95
 mix=np.tanh(mix*1.05)/np.tanh(1.05); mix=mix/np.max(np.abs(mix))*.95
 mix[-int(.4*SR):]*=np.linspace(1,0,int(.4*SR))
 sf.write(f'{S}/mix.wav',np.stack([mix,mix],1).astype(np.float32),SR); print('ok',N/SR)
