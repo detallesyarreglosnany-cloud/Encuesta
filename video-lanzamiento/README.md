@@ -2,18 +2,18 @@
 
 | Archivo | Uso |
 |---|---|
-| `cumbre-transformacion-empresarial-2026.mp4` | Máxima calidad · 1080×1920 · 30 fps · 64 s · Reels / TikTok / Historias |
+| `cumbre-transformacion-empresarial-2026.mp4` | Máxima calidad · 1080×1920 · 30 fps · 54 s · Reels / TikTok / Historias |
 | `cumbre-whatsapp.mp4` | Versión ligera (~12 MB) para estados y envíos por WhatsApp |
 
 ## Voz
-Locución con la voz venezolana **Miguel – Warm, Confident, Inspiring** de ElevenLabs (`eleven_multilingual_v2`, velocidad 1,15).
+Locución con la voz venezolana **Joseph Corona – Clear and Professional** de ElevenLabs (`eleven_multilingual_v2`, velocidad 1,15).
 Muestras de otras voces en `muestras-voz/`. Para cambiar de voz:
 `python3 fuente/el_full.py <dir> <voice_id> 1.15` → `timeline.py` → render → `music.py` → ffmpeg.
 
 | Voz | voice_id |
 |---|---|
-| Miguel (usada) | STFMZniNPVEtF1Ug6b81 |
-| Joseph Corona | SIpDYvpsUzCaJ0WmnSA8 |
+| Miguel | STFMZniNPVEtF1Ug6b81 |
+| Joseph Corona (usada) | SIpDYvpsUzCaJ0WmnSA8 |
 | Andrea | O5hbneAmtjLMgfg5UFIm |
 | Valeria | iyvXhCAqzDxKnq3FDjZl |
 
