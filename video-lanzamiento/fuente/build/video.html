@@ -15,6 +15,20 @@ canvas{position:absolute;left:0;top:0}
 #vig{position:absolute;inset:0;background:radial-gradient(110% 80% at 50% 50%,transparent 55%,rgba(0,0,10,.75) 100%);pointer-events:none}
 #black{position:absolute;inset:0;background:#000;opacity:1}
 
+
+/* ---------- TEASER / HOOK ---------- */
+#teaser{position:absolute;inset:0;overflow:hidden;z-index:5}
+.tz{position:absolute;top:0;height:1920px;background-size:100% 100%;display:none;filter:saturate(.9) contrast(1.12)}
+#tzshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,10,38,.35),rgba(2,10,38,.15) 30%,rgba(2,10,38,.75) 58%,rgba(2,10,38,.96) 78%),linear-gradient(160deg,rgba(30,107,255,.35),transparent 60%)}
+#hook{position:absolute;left:0;right:0;top:0;bottom:0}
+.hg{position:absolute;left:0;right:0;text-align:center}
+.hg div{font-weight:900;line-height:1.04;white-space:nowrap;letter-spacing:-1px}
+.hg .l1{font-size:74px}
+.hg .l2{font-size:86px}
+#gA{top:960px}#gB{top:1190px}#gC{top:960px}#gD{top:1190px}
+.hg .red{color:#ff5a68}
+.hg .hl{font-size:104px;background:linear-gradient(90deg,#5fe3ff,#2f8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+#hookbar{position:absolute;left:0;top:0;height:10px;background:linear-gradient(90deg,#5fe3ff,#1e6bff);box-shadow:0 0 20px #5fe3ff}
 /* ---------- S1 ---------- */
 #s1{position:absolute;inset:0}
 #t1{position:absolute;left:0;right:0;top:600px;text-align:center;filter:drop-shadow(0 0 28px rgba(47,140,255,.85)) drop-shadow(0 6px 0 rgba(0,20,90,.6))}
@@ -88,7 +102,7 @@ canvas{position:absolute;left:0;top:0}
   background:linear-gradient(180deg,rgba(11,47,143,.92),rgba(6,29,99,.92));border:3px solid rgba(95,200,255,.8);box-shadow:0 0 40px rgba(47,140,255,.7);
   font-weight:700;font-style:italic;font-size:44px;line-height:1.25}
 #rocket b{color:var(--cyan);font-weight:800}
-#nofuera{position:absolute;left:0;right:0;top:1640px;text-align:center;font-weight:900;font-size:80px;letter-spacing:-1px;color:#fff;
+#nofuera{position:absolute;left:0;right:0;top:1580px;text-align:center;font-weight:900;font-size:64px;line-height:1.05;letter-spacing:-1px;color:#fff;
   text-shadow:0 0 30px rgba(95,227,255,.9),0 0 60px rgba(30,107,255,.9);white-space:nowrap}
 
 /* ---------- S4 ---------- */
@@ -99,7 +113,7 @@ canvas{position:absolute;left:0;top:0}
 #ctaGlow{position:absolute;border-radius:16px;box-shadow:0 0 40px 14px rgba(95,227,255,.9),inset 0 0 24px rgba(95,227,255,.8);border:4px solid #bff3ff}
 #top4{position:absolute;left:0;right:0;top:60px;text-align:center}
 #top4 .a{font-weight:700;font-size:46px;color:#e8f2ff;white-space:nowrap}
-#top4 .b{font-weight:900;font-size:78px;line-height:1.05;white-space:nowrap;background:linear-gradient(90deg,#3fa0ff,#5fe3ff 50%,#3fa0ff);
+#top4 .b{font-weight:900;font-size:60px;line-height:1.05;white-space:nowrap;background:linear-gradient(90deg,#3fa0ff,#5fe3ff 50%,#3fa0ff);
   -webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(47,180,255,.9))}
 #bot4{position:absolute;left:60px;right:60px;top:1730px;height:130px;border-radius:65px;display:flex;align-items:center;justify-content:center;gap:24px;
   background:linear-gradient(90deg,#1e6bff,#2fb4ff);box-shadow:0 0 50px rgba(47,180,255,.9);font-weight:900;font-size:54px;letter-spacing:1px;white-space:nowrap}
@@ -111,26 +125,33 @@ canvas{position:absolute;left:0;top:0}
 <div id="stage">
   <canvas id="fx" width="1080" height="1920"></canvas>
 
+  <div id="teaser"><div class="tz"></div><div class="tz"></div><div class="tz"></div><div class="tz"></div><div id="tzshade"></div>
+    <div id="hook">
+      <div id="gA" class="hg"><div class="l1">ABRES TEMPRANO,</div><div class="l2">CIERRAS TARDE…</div></div>
+      <div id="gB" class="hg"><div class="l1">Y LAS VENTAS</div><div class="l2 red">▬ SIGUEN IGUAL</div></div>
+      <div id="gC" class="hg"><div class="l1">¿Y SI EL PROBLEMA</div><div class="l2">NO ERES TÚ…</div></div>
+      <div id="gD" class="hg"><div class="l1">SINO TUS</div><div class="l2 hl">HERRAMIENTAS?</div></div>
+    </div><div id="hookbar"></div></div>
   <div id="s1">
     <div id="t1"><div class="l1">CUMBRE DE</div><div class="l2">TRANSFORMACIÓN</div><div class="l3">EMPRESARIAL</div></div>
     <div id="sub"><span class="ln"></span><span>Puerto Ayacucho – Amazonas 2026</span><span class="ln r"></span></div>
     <div id="pill"><span>INSPIRA</span><i>•</i><span>APRENDE</span><i>•</i><span>APLICA</span></div>
-    <div id="concept"><div class="c1">El crecimiento de tu negocio</div><div class="c2">NO PUEDE ESPERAR</div><div class="bar"></div></div>
+    <div id="concept"><div class="c1">Un día para darle a tu negocio</div><div class="c2">LO QUE LE FALTA</div><div class="bar"></div></div>
   </div>
 
   <div id="s2"></div>
 
   <div id="s3">
     <div id="panels"></div>
-    <div id="four"><div id="f1"><span>4</span> ESPECIALISTAS</div><div id="f2"><span>4</span> PERSPECTIVAS</div></div>
+    <div id="four"><div id="f1"><span>4</span> HERRAMIENTAS</div><div id="f2"><span>1</span> SOLO LUGAR</div></div>
     <div id="group"><div class="gimg"></div><div class="sweep"></div></div>
-    <div id="big"><div id="b1">CIERRA EL AÑO</div><div id="b2">CON LA MEJOR</div><div id="b3" class="hl">EXPERIENCIA</div></div>
-    <div id="rocket">🚀 <b>Herramientas clave</b> para llevar tu negocio al siguiente nivel.</div>
-    <div id="nofuera">¡NO TE QUEDES FUERA!</div>
+    <div id="big"><div id="b1">LA PREGUNTA</div><div id="b2">NO ES</div><div id="b3" class="hl">SI PUEDES IR…</div></div>
+    <div id="rocket">🚀 <b>Ventas, clientes, dinero y tecnología</b> en un solo lugar.</div>
+    <div id="nofuera">¿PUEDES DARTE EL LUJO<br>DE NO IR?</div>
   </div>
 
   <div id="s4">
-    <div id="top4"><div class="a">El crecimiento de tu negocio</div><div class="b">NO PUEDE ESPERAR</div></div>
+    <div id="top4"><div class="a">Cierra este año aprendiendo…</div><div class="b">¡Y EMPIEZA VENDIENDO MÁS!</div></div>
     <div id="flyglow"></div>
     <div id="fly"></div>
     <div id="fsweep"><div></div></div>
@@ -164,16 +185,16 @@ const ICON={
 
 // ---------- speakers ----------
 const SPK=[
- {img:'jose.png',w:1920,first:'JOSÉ',last:'RODRÍGUEZ',spec:'VENTAS Y LIDERAZGO COMERCIAL',quote:'«Conecta, vende y <b>lidera con estrategia</b>».',icon:'hand',x0:-760,x1:-260,face:[0.30,0.25],pshort:'VENTAS Y LIDERAZGO'},
- {img:'tania.png',w:1440,first:'TANIA',last:'ALZURU',spec:'NEUROMARKETING',quote:'«De emprendedor a <b>empresario exitoso</b>».',icon:'brain',x0:-360,x1:-40,face:[0.30,0.24],pshort:'NEUROMARKETING'},
- {img:'juan.png',w:1440,first:'JUAN',last:'SIERRA',spec:'FINANZAS',quote:'«Finanzas inteligentes y <b>ganancias reales</b>».',icon:'coins',x0:-360,x1:-60,face:[0.29,0.25],pshort:'FINANZAS'},
- {img:'daniela.png',w:1440,first:'DANIELA',last:'SILVA',spec:'SOLUCIONES DIGITALES',quote:'«Tu negocio en <b>piloto automático digital</b>».',icon:'laptop',x0:-360,x1:-20,face:[0.28,0.24],pshort:'SOLUCIONES DIGITALES'},
+ {img:'jose.png',w:1920,first:'JOSÉ',last:'RODRÍGUEZ',spec:'VENTAS Y LIDERAZGO COMERCIAL',quote:'Convierte cada conversación <b>en una venta</b>.',icon:'hand',x0:-760,x1:-260,face:[0.30,0.25],pshort:'VENTAS Y LIDERAZGO'},
+ {img:'tania.png',w:1440,first:'TANIA',last:'ALZURU',spec:'NEUROMARKETING',quote:'Descubre por qué tu cliente <b>te elige a ti</b>.',icon:'brain',x0:-360,x1:-40,face:[0.30,0.24],pshort:'NEUROMARKETING'},
+ {img:'juan.png',w:1440,first:'JUAN',last:'SIERRA',spec:'FINANZAS',quote:'Descubre a dónde se va tu dinero… <b>y haz que se quede</b>.',icon:'coins',x0:-360,x1:-60,face:[0.29,0.25],pshort:'FINANZAS'},
+ {img:'daniela.png',w:1440,first:'DANIELA',last:'SILVA',spec:'SOLUCIONES DIGITALES',quote:'Tu negocio <b>vendiendo 24/7</b>, aunque estés durmiendo.',icon:'laptop',x0:-360,x1:-20,face:[0.28,0.24],pshort:'SOLUCIONES DIGITALES'},
 ];
 const s2=$('#s2');
 SPK.forEach((s,i)=>{
   const d=document.createElement('div');d.className='spk';d.id='spk'+i;
   d.innerHTML=`<div class="photo" style="width:${s.w}px;background-image:url(${s.img})"></div><div class="tint"></div><div class="shade"></div>
-  <div class="tag"><span class="num">0${i+1}</span><span class="bar"></span><span>SPEAKER</span></div>
+  <div class="tag"><span class="num">0${i+1}</span><span class="bar"></span><span>HERRAMIENTA</span></div>
   <div class="count">CUMBRE 2026</div>
   <div class="lower"><div class="icon">${ICON[s.icon]}</div>
    <div class="mask"><div class="first">${s.first}</div></div>
@@ -258,7 +279,7 @@ function st(el,o){Object.assign(el.style,o)}
 window.render=function(t){
   drawFX(t);
   // black open & close
-  $('#black').style.opacity = 1-P(t,0,.35) + P(t,T.end-.25,T.end);
+  $('#black').style.opacity = P(t,T.end-.25,T.end);
 
   // flashes
   let f=0,bf=0;
@@ -270,6 +291,27 @@ window.render=function(t){
   T.shake.forEach(([tt,a])=>{const d=t-tt; if(d>=0&&d<.5){const e=a*Math.exp(-d*10);sx+=Math.sin(d*95)*e;sy+=Math.cos(d*80)*e}});
   $('#stage').style.transform=`translate(${sx}px,${sy}px)`;
 
+
+  // ===== TEASER =====
+  const tz=$('#teaser'); const tzOn=t<T.teaserEnd+.35; tz.style.display=tzOn?'block':'none';
+  if(tzOn){
+    const tzs=tz.querySelectorAll('.tz');
+    tzs.forEach((el,i)=>{const s=SPK[i];const a=T.teaser[i], b=i<3?T.teaser[i+1]:T.teaserEnd+.35;
+      const on=t>=a&&t<b; el.style.display=on?'block':'none'; if(!on)return;
+      el.style.backgroundImage=`url(${s.img})`;
+      const u=(t-a)/Math.max(.01,b-a); const w=s.w; const left=540-s.face[0]*w;
+      st(el,{width:w+'px',left:left+'px',transformOrigin:`${s.face[0]*100}% ${s.face[1]*100}%`,transform:`scale(${lerp(1.4,1.15,eo3(clamp(u)))}) translateX(${(i%2?1:-1)*lerp(50,0,eo3(clamp(u*2)))}px)`});});
+    const H=T.hk, pop=(el,at,dur=.28,from=1.9)=>{const q=P(t,at,at+dur),e=eoE(q);st(el,{opacity:Math.min(1,q*3),transform:`scale(${lerp(from,1,e)})`,filter:`blur(${(1-e)*10}px) drop-shadow(0 4px 16px rgba(0,0,0,.9))`});return q};
+    const g=id=>$(id).children;
+    const ab=P(t,H.hC[0]-.15,H.hC[0]+.1);
+    ['#gA','#gB'].forEach(id=>{$(id).style.opacity=1-ab;$(id).style.transform=`translateY(${-ab*60}px)`});
+    pop(g('#gA')[0],H.hA[0]); pop(g('#gA')[1],H.hA[0]+.7);
+    pop(g('#gB')[0],H.hB[0]); pop(g('#gB')[1],H.hB[0]+.45,.3,1.6);
+    pop(g('#gC')[0],H.hC[0]); pop(g('#gC')[1],H.hC[0]+.6);
+    pop(g('#gD')[0],H.hD[0]); pop(g('#gD')[1],H.hD[0]+.45,.32,2.4);
+    $('#hookbar').style.width=(P(t,0,T.teaserEnd)*1080)+'px';
+    const o=P(t,T.teaserEnd-.05,T.teaserEnd+.3); tz.style.opacity=1-o; tz.style.transform=`scale(${1+o*.5})`;
+  }
   // ===== S1 =====
   const s1=$('#s1'); show(s1,t<T.s2+.3);
   if(t<T.s2+.3){
@@ -397,7 +439,7 @@ window.render=function(t){
     const kk=1080/1086*z;
     st(cg,{left:(offx+ (790)*kk)+'px',top:(250+offy+(1215)*kk)+'px',width:(272*kk)+'px',height:(120*kk)+'px',
       opacity:cq*(.55+.45*Math.sin((t-T.fb.cta)*7)),transform:`scale(${1+.04*Math.sin((t-T.fb.cta)*7)})`});
-    const tp=P(t,T.s4+.2,T.s4+.8); st($('#top4'),{opacity:tp,transform:`translateY(${(1-eo3(tp))*-40}px)`});
+    const tp=P(t,T.fb.top,T.fb.top+.5); st($('#top4'),{opacity:tp,transform:`translateY(${(1-eo3(tp))*-40}px)`});
     const bt=P(t,T.fb.cta,T.fb.cta+.45); st($('#bot4'),{opacity:bt,transform:`scale(${eoB(bt)*(bt>=1?1+.035*Math.sin((t-T.fb.cta)*7):1)})`});
     const fs=P(t,T.finalSweep,T.finalSweep+1.1); const fsd=$('#fsweep div'); fsd.style.left=lerp(-500,1500,eio(fs))+'px'; fsd.style.opacity=fs>0&&fs<1?1:0;
   }

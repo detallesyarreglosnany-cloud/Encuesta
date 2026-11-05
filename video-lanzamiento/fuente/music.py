@@ -208,7 +208,18 @@ for m in [38, 50, 53, 57, 62, 65]:
 final = lp(final, 2500) * env_adsr(len(final), 0.02, 0.5, 0.6, 2.0) * 0.08
 add(pad, final, T['finalSweep'] + 0.4)
 
-music = reverb(pad, 3.0, 0.45) + reverb(arp, 1.8, 0.3) + bass * 0.9 + reverb(drums, 1.2, 0.15) + reverb(hits, 3.5, 0.35) + reverb(fx, 2.0, 0.3)
+import os, subprocess
+ELM=f"{S}/el2/music.mp3"
+if os.path.exists(ELM):
+    subprocess.run(["ffmpeg","-v","error","-y","-i",ELM,"-ac","1","-ar",str(SR),f"{S}/el2/music.wav"],check=True)
+    m,_=sf.read(f"{S}/el2/music.wav"); em=z(); n=min(len(m),N); em[:n]=m[:n]
+    em=em/np.max(np.abs(em))
+    sfx=reverb(hits,3.5,0.35)+reverb(fx,2.0,0.3); sfx=sfx/np.max(np.abs(sfx))
+    music = em*1.0 + sfx*0.45
+    DUCK_DEPTH=0.32; MUS_GAIN=0.5; VO_GAIN=0.95; SMOOTH=0.35
+else:
+    music = reverb(pad, 3.0, 0.45) + reverb(arp, 1.8, 0.3) + bass * 0.9 + reverb(drums, 1.2, 0.15) + reverb(hits, 3.5, 0.35) + reverb(fx, 2.0, 0.3)
+    DUCK_DEPTH=0.55; MUS_GAIN=0.55; VO_GAIN=0.78; SMOOTH=0.15
 music = hp(music, 28)
 
 # ---------- voice ----------
@@ -220,7 +231,7 @@ for k, t0 in T['vo'].items():
     add(vo, a, t0, 1.0)
 # voice EQ: slight presence + warmth, light compression
 vo = hp(vo, 80)
-pres = bp(vo, 2500, 6000); vo = vo + 0.25 * pres
+pres = bp(vo, 2500, 6000); vo = vo + 0.45 * pres
 pk = np.max(np.abs(vo)); vo = vo / pk
 vo = np.tanh(vo * 1.8) / np.tanh(1.8)
 vo = reverb(vo, 0.8, 0.08)
@@ -231,12 +242,12 @@ win = int(0.08 * SR)
 envv = signal.lfilter(np.ones(win) / win, 1, act)
 envv = np.clip(envv / 0.05, 0, 1)
 # smooth attack/release
-sm = int(0.15 * SR)
+sm = int(SMOOTH * SR)
 envv = signal.lfilter(np.ones(sm) / sm, 1, envv)
-duck = 1 - 0.55 * np.clip(envv, 0, 1)
+duck = 1 - DUCK_DEPTH * np.clip(envv, 0, 1)
 
 music = music / np.max(np.abs(music))
-mix = music * 0.55 * duck + vo * 0.78
+mix = music * MUS_GAIN * duck + vo * VO_GAIN
 mix = np.tanh(mix * 1.15) / np.tanh(1.15)
 mix = mix / np.max(np.abs(mix)) * 0.95
 # stereo widen music slightly

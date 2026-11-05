@@ -1,0 +1,116 @@
+{
+ "0": {
+  "text": "Abres temprano, cierras tarde\u2026 y las ventas siguen igual. \u00bfY si el problema no eres t\u00fa\u2026 sino las herramientas que est\u00e1s usando? Por eso llega a Puerto Ayacucho la Cumbre de Transformaci\u00f3n Empresarial: un d\u00eda para darle a tu negocio lo que le falta.",
+  "lines": [
+   [
+    "hA",
+    0.0,
+    1.602
+   ],
+   [
+    "hB",
+    1.927,
+    3.135
+   ],
+   [
+    "hC",
+    3.344,
+    4.679
+   ],
+   [
+    "hD",
+    5.108,
+    8.081
+   ],
+   [
+    "01b1",
+    8.452,
+    12.272
+   ],
+   [
+    "01b2",
+    12.597,
+    15.093
+   ]
+  ],
+  "dur": 15.09297052154195
+ },
+ "1": {
+  "text": "Con Jos\u00e9 Rodr\u00edguez, aprendes a convertir cada conversaci\u00f3n en una venta. Con Tania Alzuru, descubres qu\u00e9 pasa en la mente de tu cliente\u2026 y por qu\u00e9 te elige a ti. Con Juan Sierra, por fin sabr\u00e1s a d\u00f3nde se va tu dinero\u2026 y c\u00f3mo hacer que se quede. Y con Daniela Silva, tu negocio vende las veinticuatro horas\u2026 aunque t\u00fa est\u00e9s durmiendo.",
+  "lines": [
+   [
+    "02",
+    0.0,
+    3.622
+   ],
+   [
+    "03",
+    3.947,
+    7.883
+   ],
+   [
+    "04",
+    8.255,
+    12.272
+   ],
+   [
+    "05",
+    12.539,
+    17.137
+   ]
+  ],
+  "dur": 17.136326530612244
+ },
+ "2": {
+  "text": "Ventas, clientes, dinero y tecnolog\u00eda: todo en un solo lugar. La pregunta no es si puedes ir\u2026 es si puedes darte el lujo de no ir.",
+  "lines": [
+   [
+    "06a1",
+    0.0,
+    2.252
+   ],
+   [
+    "06a2",
+    2.485,
+    3.634
+   ],
+   [
+    "06b1",
+    4.063,
+    5.375
+   ],
+   [
+    "06b2",
+    5.642,
+    7.755
+   ]
+  ],
+  "dur": 7.75546485260771
+ },
+ "3": {
+  "text": "Este viernes cuatro de diciembre, en el Club Parapata, en el coraz\u00f3n de nuestra capital. Cierra este a\u00f1o aprendiendo\u2026 y empieza el pr\u00f3ximo vendiendo m\u00e1s. \u00a1Asegura tu entrada!",
+  "lines": [
+   [
+    "07a",
+    0.0,
+    1.556
+   ],
+   [
+    "07b",
+    1.683,
+    3.971
+   ],
+   [
+    "07c",
+    4.296,
+    7.43
+   ],
+   [
+    "07d",
+    7.523,
+    8.638
+   ]
+  ],
+  "dur": 8.6378231292517
+ }
+}

@@ -2,7 +2,7 @@
 
 | Archivo | Uso |
 |---|---|
-| `cumbre-transformacion-empresarial-2026.mp4` | Máxima calidad · 1080×1920 · 30 fps · 54 s · Reels / TikTok / Historias |
+| `cumbre-transformacion-empresarial-2026.mp4` | Máxima calidad · 1080×1920 · 30 fps · 53 s · Reels / TikTok / Historias |
 | `cumbre-whatsapp.mp4` | Versión ligera (~12 MB) para estados y envíos por WhatsApp |
 
 ## Voz
@@ -32,3 +32,8 @@ python3 music.py <dir>              # música sintetizada + mezcla con ducking
 ffmpeg -framerate 30 -i frames/f_%05d.jpg -i mix.wav -c:v libx264 -crf 18 -pix_fmt yuv420p -c:a aac out.mp4
 ```
 Para cambiar la voz por una locutora venezolana real: graba cada línea con los nombres de `vo/` (01a…07d), reemplaza los `.wav` y vuelve a ejecutar desde `timeline.py`; el video se reajusta solo.
+
+## Versión actual (guion persuasivo)
+Guion problema → solución: «Abres temprano, cierras tarde… y las ventas siguen igual», cada speaker presentado como una herramienta
+y cierre con FOMO. Voz Joseph (ElevenLabs) generada en 4 bloques continuos (`el_blocks.py`), tiempos en `timeline3.py`,
+música compuesta con ElevenLabs Music por secciones (`music.mp3`) y mezcla en `music.py`.
