@@ -37,3 +37,10 @@ Para cambiar la voz por una locutora venezolana real: graba cada línea con los 
 Guion problema → solución: «Abres temprano, cierras tarde… y las ventas siguen igual», cada speaker presentado como una herramienta
 y cierre con FOMO. Voz Joseph (ElevenLabs) generada en 4 bloques continuos (`el_blocks.py`), tiempos en `timeline3.py`,
 música compuesta con ElevenLabs Music por secciones (`music.mp3`) y mezcla en `music.py`.
+
+## Versión 3 (historia del comerciante, 64 s)
+Voz grabada por la clienta en ElevenLabs (`fuente/v3/voz.mp3`), transcrita con marcas de tiempo (`stt.json`),
+pausas largas recortadas y pausa dramática añadida para la escena de cierre (`edit_voice.py`).
+Escenas: comerciante sacando cuentas → Santa María + «CERRADO» → apagón → «¡Esto es para ti!» → Cumbre →
+speakers → «después de la cumbre» (QR, pedidos, finanzas) → grupo → folleto.
+Render: `PAGE=video3.html node render.js <dir> frames 0 1935 30`; tiempos en `tl3.py`; mezcla en `mix3.py`.
